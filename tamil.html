@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartNest Interiors</title>
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+    body {background:#0e0e0e;color:white;line-height:1.6;}
+
+    /* Navbar */
+    .navbar {
+      display:flex;justify-content:space-between;align-items:center;
+      padding:15px 50px;background:rgba(20,20,20,0.8);backdrop-filter:blur(10px);
+      position:sticky;top:0;z-index:100;
+    }
+    .navbar h1 {color:#ffcc00;font-size:24px;font-weight:bold;}
+    .navbar ul {display:flex;gap:20px;}
+    .navbar ul li {list-style:none;}
+    .navbar ul li a {color:white;transition:0.3s;}
+    .navbar ul li a:hover {color:#ffcc00;}
+
+    /* Hero Section */
+    .hero {
+      height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+      background:url('3947177.webp') no-repeat center/cover;
+      text-align:center;position:relative;
+    }
+    .hero::after {
+      content:"";position:absolute;top:0;left:0;width:100%;height:100%;
+      background:rgba(0,0,0,0.6);
+    }
+    .hero h2, .hero p, .hero button {position:relative;z-index:2;}
+    .hero h2 {font-size:56px;color:#ffcc00;text-shadow:2px 2px 10px black;}
+    .hero p {font-size:20px;max-width:600px;margin:20px auto;}
+    .btn {
+      padding:12px 30px;font-size:18px;border:none;border-radius:12px;
+      background:linear-gradient(45deg,#ffcc00,#ff8800);color:black;
+      box-shadow:0 8px 20px rgba(0,0,0,0.5);cursor:pointer;transition:0.3s;
+    }
+    .btn:hover {transform:scale(1.1);box-shadow:0 12px 30px rgba(255,200,0,0.5);}
+
+    /* Section Titles */
+    section h2 {text-align:center;font-size:34px;margin-bottom:30px;color:#ffcc00;}
+
+    /* Products Grid - Glassmorphism */
+    .products {padding:70px 50px;background:#1a1a1a;}
+    .product-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+    .product-card {
+      background:rgba(255,255,255,0.05);border-radius:20px;padding:25px;text-align:center;
+      backdrop-filter:blur(15px);box-shadow:0 8px 30px rgba(0,0,0,0.6);
+      transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card:hover {transform:translateY(-10px);box-shadow:0 15px 40px rgba(255,200,0,0.2);}
+    .product-card img {max-width:100%;border-radius:15px;margin-bottom:15px;}
+    .product-card h3 {margin-bottom:10px;color:#ffcc00;}
+
+    /* Interior Rooms Section */
+    .rooms {padding:70px 50px;background:#111;}
+    .room {margin-bottom:40px;display:flex;align-items:center;gap:30px;}
+    .room img {width:50%;border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,0.5);}
+    .room div {flex:1;}
+    .room h3 {color:#ffcc00;margin-bottom:10px;}
+
+    /* Contact */
+    .contact {padding:70px 50px;background:#1a1a1a;text-align:center;}
+    .contact form {max-width:500px;margin:auto;display:flex;flex-direction:column;gap:15px;}
+    .contact input,.contact textarea {
+      padding:14px;border:none;border-radius:12px;font-size:16px;
+      background:#111;color:white;outline:none;
+    }
+    .contact button {background:#ffcc00;color:black;}
+
+    /* Footer */
+    footer {background:#000;text-align:center;padding:20px;}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>SmartNest Interiors</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <h2>Luxury Smart Living</h2>
+    <p>Upgrade your interiors with stylish automation – lighting, security & comfort in one touch.</p>
+    <button class="btn">Explore Collection</button>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="4iHHGVLiFrePov66LsXzVF.jpg" alt="Smart Bulb">
+        <h3>Smart LED Bulb</h3>
+        <p>Custom moods, voice control & energy saving.</p>
+        <button class="btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <img src="VSS_design_1.jpg" alt="Camera">
+        <h3>Smart Camera</h3>
+        <p>24/7 security with mobile alerts & HD view.</p>
+        <button class="btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <img src="smart-home-interface-with-augmented-realty-iot-object-interior-design_756748-3174.avif" alt="Plug">
+        <h3>Smart Plug</h3>
+        <p>Switch appliances remotely with your phone.</p>
+        <button class="btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms Showcase -->
+  <section class="rooms" id="rooms">
+    <h2>Smart Rooms</h2>
+    <div class="room">
+      <img src="1404169.jpg" alt="Living Room">
+      <div>
+        <h3>Living Room</h3>
+        <p>Control lights, TV & curtains with a single click for ultimate comfort.</p>
+      </div>
+    </div>
+    <div class="room">
+      <div>
+        <h3>Bedroom</h3>
+        <p>Create relaxing moods with smart lights & save energy effortlessly.</p>
+      </div>
+      <img src="1408411.jpg" alt="Bedroom">
+    </div>
+    <div class="room">
+      <img src="4k-kitchen-background-3840-x-2160-s6yemlhfd3r4suor.jpg" alt="Kitchen">
+      <div>
+        <h3>Kitchen</h3>
+        <p>Smart plugs & appliances make cooking and energy use smarter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Message"></textarea>
+      <button class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SmartNest Interiors. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
